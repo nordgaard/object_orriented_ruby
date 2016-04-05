@@ -17,4 +17,10 @@ size: "X-Large"
 color: "red"
 },
 
+  {
+price: 50
+size: "chubby"
+color: "pink"
+},
+
 ]
