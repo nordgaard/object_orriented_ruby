@@ -1,34 +1,20 @@
 class Tee_shirts
 
-  #attr_reader #getter
-  #attr_writer   #setter
   attr_accessor :size, :price, :color #combo getter and setter
 
-  def initialize(price, size, color) #has to be the same number of arguments as your new a_shirt
-    @price = price
-    @size = size
-    @color = color
+  def initialize(shirt_hash) #has to be the same number of arguments as your new a_shirt
+    @size = shirt_hash[:size]
+    @price = shirt_hash[:price]
+    @color = shirt_hash[:color]
   end
-
-  # def price
-  #   @price = price
-  # end
-
-  # def size
-  #   @size = size
-  # end
-
-  # def color
-  #   @color = color
-  # end
 
   def prints_info
     p "#{@price} :: #{@size} :: #{@color}"
   end
 end
 
-al_shirt = Tee_shirts.new(30, "Small", "Blue") #created an instance using the class
-ben_shirt = Tee_shirts.new(45, "Medium", "Aqua")
-chris_shirt = Tee_shirts.new(85, "Large", "Gucci")
+al_shirt = Tee_shirts.new({price:30, size:"Small", color:"Blue"})   #created an instance using the class
+ben_shirt = Tee_shirts.new({price:45, size:"Medium", color:"Aqua"})
+chris_shirt = Tee_shirts.new({price:85, size:"Large", color:"Gucci"})
 
 p al_shirt
